@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- open book, hand-drawn feel -->
+  <path d="M160 52c-26-14-62-18-112-12l2 144c48-6 82-2 110 12"/>
+  <path d="M160 52c26-14 62-18 112-12l-2 144c-48-6-82-2-110 12"/>
+  <path d="M160 52v144"/>
+  <path d="M42 46l-8 2 3 148c50-7 89-3 123 14 34-17 73-21 123-14l3-148-8-2"/>
+  <!-- left page text -->
+  <path d="M70 70c22-3 44-2 70 3M70 88c22-3 44-2 70 3M70 106c18-2 38-1 58 2M70 142c22-3 44-2 70 3M70 160c16-2 32-1 48 1"/>
+  <!-- highlighted line -->
+  <rect x="66" y="117" width="78" height="14" rx="3" fill="#ffe066" stroke="none" transform="rotate(-1.2 105 124)"/>
+  <path d="M70 124c22-3 44-2 70 3"/>
+  <!-- right page text -->
+  <path d="M180 73c26-5 48-6 70-3M180 91c26-5 48-6 70-3M180 109c26-5 48-6 70-3M180 127c20-4 38-5 54-3M180 158c18-3 34-4 50-3"/>
+  <!-- footnote marker -->
+  <rect x="236" y="140" width="22" height="22" rx="5" fill="#ffe066"/>
+  <path d="M246 146l3-2v13"/>
+  <path d="M184 172c14-2 26-2 38 0" stroke-dasharray="3 5"/>
+</svg>
