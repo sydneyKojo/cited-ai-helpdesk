@@ -3,7 +3,9 @@
 import "dotenv/config";
 import { connect, setup } from "../src/db.js";
 import { ingestDir } from "../src/knowledge.js";
+import { ensureDatabase } from "./ensure-db.js";
 
+await ensureDatabase(process.env.DATABASE_URL ?? "postgres://localhost:5432/helpdesk");
 const sql = connect();
 await setup(sql);
 const [row] = await sql<{ n: number }[]>`select count(*)::int as n from conversations`;
