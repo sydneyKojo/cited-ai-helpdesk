@@ -14,8 +14,8 @@ const answerer: Answerer = {
 };
 const BASE = "http://cited.test";
 
-function app(limit = 50) {
-  return createApp({ sql, answerer, adminToken: TOKEN, limiter: new RateLimiter(limit, 60_000) });
+function app(limit = 50, trustProxy = false) {
+  return createApp({ sql, answerer, adminToken: TOKEN, limiter: new RateLimiter(limit, 60_000), trustProxy });
 }
 const post = (path: string, body: unknown, headers: Record<string, string> = {}) =>
   new Request(BASE + path, { method: "POST", headers: { "Content-Type": "application/json", ...headers }, body: JSON.stringify(body) });
@@ -88,6 +88,11 @@ describe("chat API", () => {
     const res = await app().request(post("/api/chat", { message: "How do refunds work?" }, { Origin: "https://help.acme.example" }));
     expect(res.status).toBe(200);
     expect(res.headers.get("access-control-allow-origin")).toBe("https://help.acme.example");
+  });
+
+  it("accepts its own https origin behind a proxy", async () => {
+    const headers = { Origin: "https://help.cited.example", "X-Forwarded-Proto": "https", "X-Forwarded-Host": "help.cited.example" };
+    expect((await app(50, true).request(post("/api/chat", { message: "How do refunds work?" }, headers))).status).toBe(200);
   });
 
   it("rate limits a visitor", async () => {

@@ -93,7 +93,7 @@ cp .env.example .env        # set ADMIN_TOKEN and ANTHROPIC_API_KEY (or LLM_PROV
 createdb helpdesk && createdb helpdesk_test
 npm run seed                # loads knowledge/*.md and a month of example conversations (no AI calls)
 npm run dev                 # http://localhost:3300 · demo: /demo · console: /console
-npm test                    # 26 tests: retrieval, grounding rules, handoffs, CORS, rate limits, console auth
+npm test                    # 27 tests: retrieval, grounding rules, handoffs, CORS, rate limits, console auth
 npm run ask -- "How do I reset my password?"
 ```
 
