@@ -12,7 +12,8 @@
     "ask": "tsx src/cli.ts ask",
     "test": "vitest run",
     "typecheck": "tsc -p .",
-    "seed": "tsx scripts/seed-demo.ts"
+    "seed": "tsx scripts/seed-demo.ts",
+    "db:prepare": "tsx scripts/prepare.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.130.0",
