@@ -8,6 +8,8 @@ conversation attached.
 
 **Built by [Sydney Torkornoo](https://baobabpeaks.com)**, full-stack and AI developer · [GitHub](https://github.com/sydneyKojo)
 
+**Live demo: [cited.baobabpeaks.com](https://cited.baobabpeaks.com)**. Try the assistant on the [demo help centre](https://cited.baobabpeaks.com/demo).
+
 ---
 
 ## The problem it solves
