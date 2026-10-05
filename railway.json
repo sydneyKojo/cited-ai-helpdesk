@@ -4,10 +4,7 @@
     "builder": "RAILPACK"
   },
   "deploy": {
-    "preDeployCommand": [
-      "npm run db:prepare"
-    ],
-    "startCommand": "npm start",
+    "startCommand": "npm run db:prepare && npm start",
     "healthcheckPath": "/health",
     "restartPolicyType": "ON_FAILURE"
   }
